@@ -1,5 +1,5 @@
 use("Bodegas_Mongo");
-db.createCollection("bodegas", {
+db.createCollection("Bodega", {
   validator: {
     $jsonSchema: {
       bsonType: "object",
@@ -372,7 +372,7 @@ db.bodegas.insertMany([
   
 
 use("Bodegas_Mongo");
-db.createCollection("historiales", {
+db.createCollection("Historial", {
   validator: {
     $jsonSchema: {
       bsonType: "object",
@@ -549,7 +549,7 @@ db.historiales.insertMany([
 ]);  
 
 use("Bodegas_Mongo");
-db.createCollection("inventarios", {
+db.createCollection("Inventario", {
   validator: {
     $jsonSchema: {
       bsonType: "object",
@@ -1108,7 +1108,7 @@ db.inventarios.insertMany([
 ]);
 
 use("Bodegas_Mongo");
-db.createCollection("productos", {
+db.createCollection("Producto", {
     validator: {
       $jsonSchema: {
         bsonType: "object",
@@ -1567,7 +1567,7 @@ db.productos.insertMany([
 
 
 use("Bodegas_Mongo");
-db.createCollection("users", {
+db.createCollection("User", {
     validator: {
       $jsonSchema: {
         bsonType: "object",
