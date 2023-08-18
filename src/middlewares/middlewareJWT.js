@@ -6,7 +6,8 @@ const crearToken = async (req, res) => {
         .setProtectedHeader({ alg: 'HS256', typ: 'JWT' })
         .setIssuedAt()
         .setExpirationTime('1h')
-        .sign(encoder.encode(process.env.JWT_TOKEN));
+        .sign(encoder.encode(process.env.JWT_TOKEN
+            ));
     res.send(jwtConstructor);
 }
 
@@ -17,7 +18,8 @@ const validarToken = async (req, res, next) => {
         const encoder = new TextEncoder();
         await jwtVerify(
             authorization,
-            encoder.encode(process.env.JWT_TOKEN)
+            encoder.encode(process.env.JWT_TOKEN
+                )
         );
         next();
     } catch (error) {
